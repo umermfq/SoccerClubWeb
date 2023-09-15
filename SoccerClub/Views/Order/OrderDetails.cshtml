@@ -1,0 +1,525 @@
+﻿@model SoccerClub.Models.Home
+
+<html>
+
+    <head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #dfe9f5;
+        }
+.invoice-container {
+    padding: 1rem;
+            background: #1A233A;
+}
+.invoice-container .invoice-header .invoice-logo {
+    margin: 0.8rem 0 0 0;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #bcd0f7;
+}
+.invoice-container .invoice-header .invoice-logo img {
+    max-width: 130px;
+}
+.invoice-container .invoice-header address {
+    font-size: 0.8rem;
+    color: #8a99b5;
+    margin: 0;
+}
+.invoice-container .invoice-details {
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    line-height: 180%;
+    background: #1a233a;
+}
+.invoice-container .invoice-details .invoice-num {
+    text-align: right;
+    font-size: 0.8rem;
+}
+.invoice-container .invoice-body {
+    padding: 1rem 0 0 0;
+}
+.invoice-container .invoice-footer {
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 5px 0 0 0;
+}
+
+.invoice-status {
+    text-align: center;
+    padding: 1rem;
+    background: #272e48;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.invoice-status h2.status {
+    margin: 0 0 0.8rem 0;
+}
+.invoice-status h5.status-title {
+    margin: 0 0 0.8rem 0;
+    color: #8a99b5;
+}
+.invoice-status p.status-type {
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    line-height: 150%;
+}
+.invoice-status i {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    display: inline-block;
+    padding: 1rem;
+    background: #1a233a;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.invoice-status .badge {
+    text-transform: uppercase;
+}
+
+
+.card {
+    background: #272E48;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+.custom-table {
+    border: 1px solid #2b3958;
+}
+.custom-table thead {
+    background: #2f71c1;
+}
+.custom-table thead th {
+    border: 0;
+    color: #ffffff;
+}
+.custom-table > tbody tr:hover {
+    background: #172033;
+}
+.custom-table > tbody tr:nth-of-type(even) {
+    background-color: #1a243a;
+}
+.custom-table > tbody td {
+    border: 1px solid #2e3d5f;
+}
+
+.table {
+    background: #324681;
+    color: #fff;
+    font-size: 22px;
+    width: 100%;
+}
+.text-success {
+    color: #c0d64a !important;
+}
+.custom-actions-btns {
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-actions-btns .btn {
+    margin: .3rem 0 .3rem .3rem;
+}
+
+        .container {
+            display: flex;
+        }
+
+        nav {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            height: 100vh;
+            left: 0;
+            background: #fff;
+            width: 280px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            text-align: center;
+            display: flex;
+            margin: 10px 0 0 10px;
+        }
+
+            .logo img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
+
+            .logo span {
+                font-weight: bold;
+                padding-left: 15px;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+
+        a {
+            position: relative;
+            color: rgb(85, 83, 83);
+            font-size: 14px;
+            display: table;
+            width: 280px;
+            padding: 10px;
+        }
+
+        nav .fas {
+            position: relative;
+            width: 70px;
+            height: 40px;
+            top: 14px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .nav-item {
+            position: relative;
+            top: 12px;
+            margin-left: 10px;
+        }
+
+        a:hover {
+            background: #eee;
+        }
+
+        .logout {
+            position: absolute;
+            bottom: 0;
+        }
+
+        /* Main Section */
+        .main {
+            position: relative;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .main-top {
+            display: flex;
+            width: 100%;
+        }
+
+            .main-top i {
+                position: absolute;
+                right: 0;
+                margin: 10px 30px;
+                color: rgb(110, 109, 109);
+                cursor: pointer;
+            }
+
+        .main-skills {
+            display: flex;
+            margin-top: 20px;
+        }
+
+            .main-skills .card {
+                width: 25%;
+                margin: 10px;
+                background: #fff;
+                text-align: center;
+                border-radius: 20px;
+                padding: 10px;
+                box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+            }
+
+                .main-skills .card h3 {
+                    margin: 10px;
+                    text-transform: capitalize;
+                }
+
+                .main-skills .card p {
+                    font-size: 12px;
+                }
+
+                .main-skills .card button {
+                    background: orangered;
+                    color: #fff;
+                    padding: 7px 15px;
+                    border-radius: 10px;
+                    margin-top: 15px;
+                    cursor: pointer;
+                }
+
+                    .main-skills .card button:hover {
+                        background: rgba(223, 70, 15, 0.856);
+                    }
+
+                .main-skills .card i {
+                    font-size: 22px;
+                    padding: 10px;
+                }
+
+        /* Courses */
+        .main-course {
+            margin-top: 20px;
+            text-transform: capitalize;
+        }
+
+        .course-box {
+            width: 100%;
+            height: 300px;
+            padding: 10px 10px 30px 10px;
+            margin-top: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+
+            .course-box ul {
+                list-style: none;
+                display: flex;
+            }
+
+                .course-box ul li {
+                    margin: 10px;
+                    color: gray;
+                    cursor: pointer;
+                }
+
+                .course-box ul .active {
+                    color: #000;
+                    border-bottom: 1px solid #000;
+                }
+
+            .course-box .course {
+                display: flex;
+            }
+
+        .box {
+            width: 33%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            background: rgb(235, 233, 233);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+
+            .box p {
+                font-size: 12px;
+                margin-top: 5px;
+            }
+
+            .box button {
+                background: #000;
+                color: #fff;
+                padding: 7px 10px;
+                border-radius: 10px;
+                margin-top: 3rem;
+                cursor: pointer;
+            }
+
+                .box button:hover {
+                    background: rgba(0, 0, 0, 0.842);
+                }
+
+            .box i {
+                font-size: 7rem;
+                float: right;
+                margin: -20px 20px 20px 0;
+            }
+
+        .html {
+            color: rgb(25, 94, 54);
+        }
+
+        .css {
+            color: rgb(104, 179, 35);
+        }
+
+        .js {
+            color: rgb(28, 98, 179);
+        }
+
+
+        </style>
+    </head>
+
+    <body>
+
+    <div class="container">
+
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="logo">
+                        <img src="~/Admin/images/logo.jpg" alt="">
+                        <span class="nav-item">DashBoard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/dashboard">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/User/Index" onclick="userclick()">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-item">Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Products/Index">
+                        <i class="fas fa-wallet"></i>
+                        <span class="nav-item">Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Order/Index">
+                        <i class="fas fa-chart-bar"></i>
+                        <span class="nav-item">Orders</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="" class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="main">
+
+        <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="invoice-container">
+                            <div class="invoice-header">
+
+                                <!-- Row start -->
+                                <div class="row gutters">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="custom-actions-btns mb-5">
+                                            <a href="#" class="btn btn-primary">
+                                                <i class="icon-download"></i> Download
+                                            </a>
+                                            <a href="#" class="btn btn-secondary">
+                                                <i class="icon-printer"></i> Print
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row end -->
+                                <!-- Row start -->
+                                <div class="row gutters">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <a href="index.html" class="invoice-logo">
+                                            <img src="~/Admin/images/logo.png" />
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <address class="text-right">
+                                                @Model.OrderDetails.username<br>
+                                          
+                                        </address>
+                                    </div>
+                                </div>
+                                <!-- Row end -->
+                                <!-- Row start -->
+                                <div class="row gutters">
+                                    
+                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                                        <div class="invoice-details">
+                                            <div class="invoice-num">
+                                                    <h1 style="color:#fff;">Invoice - #009</h1>
+                                                    <h1style ="color:#fff;">@Model.OrderDetails.dated<h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row end -->
+
+                            </div>
+
+                            <div class="invoice-body">
+
+                                <!-- Row start -->
+                                <div class="row gutters">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="table-responsive">
+                                            <table class="table custom-table m-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Items</th>
+                                                        <th>Product ID</th>
+                                                        <th>Quantity</th>
+                                                        <th>Sub Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                          
+                                                            <p class="m-0 text-muted">
+                                                                    @Model.OrderDetails.Name
+                                                            </p>
+                                                        </td>
+                                                            <td>@Model.OrderDetails.Price</td>
+                                                            <td>@Model.OrderDetails.Quantity</td>
+                                                            <td>@Model.OrderDetails.Total</td>
+                                                    </tr>
+                                                   
+                                                    <tr>
+                                                        <td>&nbsp;</td>
+                                                        <td colspan="2">
+                                                           
+                                                            <h5 class="text-success"><strong>Grand Total</strong></h5>
+                                                        </td>
+                                                        <td>
+                                                            <p>
+                                                                    <h5 class="text-success"><strong>@Model.OrderDetails.Total</strong></h5>
+                                                               
+                                                            </p>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row end -->
+
+                            </div>
+
+                            <div class="invoice-footer">
+                                Thank you for your Business.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    </body>
+</html>

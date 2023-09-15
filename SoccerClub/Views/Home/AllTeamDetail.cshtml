@@ -1,0 +1,1433 @@
+﻿@{
+
+
+}
+
+@model SoccerClub.Models.Home
+
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zxx"> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang="zxx"> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang="zxx"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zxx">
+<!--<![endif]-->
+<head>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- Bootstrap JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+	<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.6.0/mdb.min.css"
+  rel="stylesheet"
+/>
+
+<!-- MDB JavaScript (Optional) -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.6.0/mdb.min.js"
+></script>
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Soccer BootStrap HTML5 CSS3 Theme</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/Admin/css/normalize.css">
+	<link rel="stylesheet" href="~/Admin/css/font-awesome.min.css">
+	<link rel="stylesheet" href="~/Admin/css/transitions.css">
+	<link rel="stylesheet" href="~/Admin/css/prettyPhoto.css">
+	<link rel="stylesheet" href="~/Admin/css/swiper.min.css">
+	<link rel="stylesheet" href="~/Admin/css/jquery-ui.css">
+	<link rel="stylesheet" href="~/Admin/css/animate.css">
+	<link rel="stylesheet" href="~/Admin/css/owl.theme.css">
+	<link rel="stylesheet" href="~/Admin/css/owl.carousel.css">
+	<link rel="stylesheet" href="~/Admin/css/customScrollbar.css">
+	<link rel="stylesheet" href="~/Admin/css/icomoon.css">
+	<link rel="stylesheet" href="~/Admin/css/main.css">
+	<link rel="stylesheet" href="~/Admin/css/color.css">
+	<link rel="stylesheet" href="~/Admin/css/responsive.css">
+	<script src="~/Admin/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+	<style>
+
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 1200px;
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 60px;
+		}
+
+		.col {
+			flex: 0 0 calc(33.333% - 15px); /* Three columns with 15px gap */
+			margin-bottom: 30px; /* Add some margin between rows */
+		}
+
+		.card {
+			border: 1px solid #eee;
+			border-radius: 15px;
+			padding: 20px;
+			background-color: #f5f5f5;
+			box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);
+			-webkit-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);
+		}
+/* Media query for smaller screens, such as mobile devices */
+
+
+
+			.card img {
+				max-width: 250px;
+			/* 	transform: translateY(-15%); */
+			}
+
+		.img-placeholder {
+			position: relative;
+		
+			/* max-height: 182px; */
+			width: 90px;
+			height: 90px;
+			overflow: hidden;
+			border-radius: 50px;
+			margin-left: 100px;
+			box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
+			-webkit-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
+		}
+
+		
+
+		p {
+			font-weight: 400;
+		}
+
+		a {
+			color: #000;
+			font-weight: 400;
+			text-decoration: none;
+		}
+
+			a:hover {
+				color: inherit;
+			}
+
+			.clearfix
+			{
+			clear: both;
+			}
+
+		.nameheading
+		{
+			text-align: center;
+			text-align: center;
+			color: #FFCC33;
+			background-color: #373542;
+			border: 2px solid #FFCC33;
+			margin-top: 7px
+
+		}
+
+		.playerparagraph
+		{
+			font-weight:bold;
+		}
+
+		.position
+		{
+			color:#000;
+		}
+
+		#exTab1 .tab-content {
+			color: white;
+			background-color: #428bca;
+			padding: 5px 15px;
+		}
+
+		#exTab2 h3 {
+			color: white;
+			background-color: #428bca;
+			padding: 5px 15px;
+		}
+
+		/* remove border radius for the tab */
+
+		#exTab1 .nav-pills > li > a {
+			border-radius: 0;
+		}
+
+		/* change border radius for the tab , apply corners on top*/
+
+		#exTab3 .nav-pills > li > a {
+			border-radius: 4px 4px 0 0;
+		}
+
+		.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+			color: #FFCC33;
+			background-color: #373542;
+			border: 2px solid #FFCC33;
+		}
+
+
+
+
+
+
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  color: #262626;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+
+
+  &.small {
+    font-size: 14px;
+  }
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+			background-color: #373542;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card1 {
+			display: inline-block;
+			position: relative;
+			width: 460px;
+			background-color: #f2f8f9;
+			border-radius: 4px;
+			padding: 32px 26px;
+			margin: 12px;
+			text-decoration: none;
+			z-index: 0;
+			overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+			background: #F0C134;
+    height: 32px;
+    width: 32px;
+			border: 3px solid #373542;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(30);
+  }
+}
+
+.card1:hover {
+  p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
+}
+
+.card2 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(2.15);
+  }
+}
+
+.card3 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+  
+  .go-corner {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    border: 1px solid #00838d;
+    box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+    z-index: 500;
+  }
+}
+
+.card3:hover {
+  p{color: #00838d}
+  .go-corner {
+    transition: opactiy 0.3s linear;
+    opacity: 1;
+  }
+}
+
+
+  
+  .go-arrow {
+    transform: skew(-6deg);
+    margin-left: -2px;
+    margin-top: 9px;
+    opacity: 0;
+  }
+/* 
+  &:hover {
+    border: 1px solid #CD3D73;
+  } */
+  
+  h3 {margin-top: 8px;}
+}
+
+.card4:hover {
+  .go-corner {
+    margin-right: -12px;
+  }
+  .go-arrow {
+    opacity: 1;
+  }
+}
+
+		.small {
+			font-size: 86%;
+			text-align:center;
+		}
+
+		.card1.status1 {
+			/* Background color for status 1 */
+			background-color: #baf7b5; /* Red */
+		}
+
+		.card1.status0 {
+			
+			/* Background color for status 0 */
+			background-color: #f7b5b5; /* Green */
+		}
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+	<script type="text/javascript">
+
+		
+
+
+
+
+
+
+
+		$(function () {
+			$(".btnViewPDetail").click(function () {
+				$.ajax({
+					type: "POST",
+					url: "/Home/AjaxMethod",
+					data: { "pid": this.title },
+					success: function (response) {
+					//	alert("Hello: " + response.jersey + "   : " + response.ownGoals);
+						$("#myModalLabel").html(response.name);
+						$("#lblage").html(response.age);
+						$("#lbljersey").html(response.jersey);
+						$("#lblweight").html(response.weight);
+						$("#lblheight").html(response.height);
+						$("#lblplaytime").html(response.totalplaytime);
+						$("#lblfaulcom").html(response.faulscommitted);
+						$("#lblredcard").html(response.redcards);
+						$("#lblyelcard").html(response.yellowcards);
+						$("#lblgoal").html(response.ownGoals);
+						$("#lbloffside").html(response.offsides);
+
+					},
+					failure: function (response) {
+						alert(response.responseText);
+					},
+					error: function (response) {
+						alert(response.responseText);
+					}
+				});
+			});
+		});
+	</script>
+
+
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+		<!--************************************
+				Mobile Menu Start
+		*************************************-->
+		<div id="tg-navigationm-mobile" class="tg-navigationm-mobile tg-navigation collapse navbar-collapse">
+			<span id="tg-close" class="tg-close fa fa-close"></span>
+			<div class="tg-colhalf">
+				<ul>
+					<li>
+						<a href="#">Main</a>
+						<ul class="tg-dropdown-menu">
+							<li><a href="index-2.html">home1</a></li>
+							<li><a href="index2.html">home2</a></li>
+						</ul>
+					</li>
+					<li class="active">
+						<a href="#">team</a>
+						<ul class="tg-dropdown-menu">
+							<li class="active"><a href="playergrid-v1.html">playergrid-v1</a></li>
+							<li><a href="playergrid-v2.html">playergrid-v2</a></li>
+							<li><a href="playerdetail.html">playergrid detail</a></li>
+						</ul>
+					</li>
+					<li><a href="buyticket.html">Buy Tickets</a></li>
+					<li>
+						<a href="#">Match Results</a>
+						<ul class="tg-dropdown-menu">
+							<li><a href="matchresult.html">match result</a></li>
+							<li><a href="matchresultdetail.html">match result detail</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="tg-colhalf">
+				<ul>
+					<li>
+						<a href="#">fixtures</a>
+						<ul class="tg-dropdown-menu">
+							<li><a href="fixtures.html">fixtures</a></li>
+							<li><a href="fixturedetail.html">fixture detail</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">pro soccer media</a>
+						<ul class="tg-dropdown-menu">
+							<li><a href="soccermedia-1.html">pro soccer media1</a></li>
+							<li><a href="soccermedia-2.html">pro soccer media2</a></li>
+						</ul>
+					</li>
+					<li><a href="contactus.html">Contact</a></li>
+					<li>
+						<a href="#"><i class=" fa fa-navicon"></i></a>
+						<ul>
+							<li><a href="aboutus.html">about us</a></li>
+							<li><a href="shoplist.html">shop list</a></li>
+							<li><a href="shopgrid.html">shop grid</a></li>
+							<li><a href="productsingle.html">shop detail</a></li>
+							<li><a href="bloglist.html">blog list</a></li>
+							<li><a href="bloggrid.html">blog grid</a></li>
+							<li><a href="blogdetail.html">blog detail</a></li>
+							<li><a href="404.html">404 error</a></li>
+							<li><a href="comming-soon.html">comming soon</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--************************************
+				Mobile Menu End
+		*************************************-->
+		<!--************************************
+				Header Start
+		*************************************-->
+		<header id="tg-header" class="tg-header tg-haslayout">
+			<div class="container">
+				<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="tg-topbar tg-haslayout">
+							<nav id="tg-topaddnav" class="tg-topaddnav">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-addnavigationm-mobile">
+										<i class="fa fa-arrow-right"></i>
+									</button>
+								</div>
+								<div id="tg-addnavigationm-mobile" class="tg-addnavigationm-mobile collapse navbar-collapse">
+									<div class="tg-colhalf pull-right">
+										<nav class="tg-addnav">
+											<ul>
+												<li><a href="Register/Login">login</a></li>
+												<li><a href="Register/register">Register</a></li>
+												<li>
+													<div class="tg-cart">
+														<a href="/Merchandise/ViewCart" class="dropdown-toggle" id="tg-cartdropdown" data-toggle="dropdown">
+															<i class="fa fa-shopping-cart"></i>
+														</a>
+														<div class="tg-cartcontent dropdown-menu" aria-labelledby="tg-cartdropdown">
+															<ul>
+																<li>
+																	<figure>
+																		<a href="#">
+																			<img src="~/Admin/images/thumbnails/img-01.jpg" alt="image description">
+																		</a>
+																	</figure>
+																	<div class="tg-product-detail">
+																		<h3><a href="#">Smooth 3-Stripes Scarf</a></h3>
+																		<span class="tg-price">Price: $23</span>
+																		<a class="tg-delete" href="#"></a>
+																	</div>
+																</li>
+																<li>
+																	<figure>
+																		<a href="#">
+																			<img src="~/Admin/images/thumbnails/img-02.jpg" alt="image description">
+																		</a>
+																	</figure>
+																	<div class="tg-product-detail">
+																		<h3><a href="#">Smooth 3-Stripes Scarf</a></h3>
+																		<span class="tg-price">Price: $23</span>
+																		<a class="tg-delete" href="#"></a>
+																	</div>
+																</li>
+																<li>
+																	<figure>
+																		<a href="#">
+																			<img src="~/Admin/images/thumbnails/img-03.jpg" alt="image description">
+																		</a>
+																	</figure>
+																	<div class="tg-product-detail">
+																		<h3><a href="#">Smooth 3-Stripes Scarf</a></h3>
+																		<span class="tg-price">Price: $23</span>
+																		<a class="tg-delete" href="#"></a>
+																	</div>
+																</li>
+																<li>
+																	<div class="tg-btnbox">
+																		<strong class="tg-carttotal">Total: $134</strong>
+																		<a class="tg-btn" href="#"><span>checkout</span></a>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<a id="tg-btn-search" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+									<div class="tg-colhalf">
+										<ul class="tg-socialicons">
+											<li>
+												<a href="#">
+													<i class="fa fa-facebook"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-twitter"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-linkedin"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-google-plus"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="fa fa-dribbble"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<nav id="tg-nav" class="tg-nav brand-center">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigationm-mobile">
+									<i class="fa fa-bars"></i>
+								</button>
+								<strong class="tg-logo">
+									<a href="index-2.html"><img src="~/Admin/images/logo.png" alt="image description"></a>
+								</strong>
+							</div>
+							<div id="tg-navigation" class="tg-navigation">
+								<div class="tg-colhalf">
+									<ul>
+										<li class="active">
+											<a href="/">Home</a>
+
+										</li>
+										<li>
+											<a href="#">team</a>
+											<ul class="tg-dropdown-menu">
+												<li><a href="playergrid-v1.html">playergrid-v1</a></li>
+												<li><a href="playergrid-v2.html">playergrid-v2</a></li>
+												<li><a href="playerdetail.html">playergrid detail</a></li>
+											</ul>
+										</li>
+										<li><a href="/Merchandise/Index">Merchandise</a></li>
+										<li>
+											<a href="#">Matches</a>
+											<ul class="tg-dropdown-menu">
+												<li><a href="/Home/Matchresult">Match Results</a></li>
+												<li><a href="/Home/UpcomingMatch">Upcoming Matches</a></li>
+
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="tg-colhalf">
+									<ul>
+										<li>
+											<a href="/Home/Fixtures">fixtures</a>
+
+										</li>
+
+										<li><a href="/Home/playersgallery">Players Gallery</a></li>
+										<li><a href="/Home/Contact">Contact</a></li>
+
+										<li>
+											<a href="#"><i class=" fa fa-navicon"></i></a>
+											<ul>
+												<li><a href="aboutus.html">about us</a></li>
+												<li><a href="shoplist.html">shop list</a></li>
+												<li><a href="shopgrid.html">shop grid</a></li>
+												<li><a href="productsingle.html">shop detail</a></li>
+												<li><a href="bloglist.html">blog list</a></li>
+												<li><a href="bloggrid.html">blog grid</a></li>
+												<li><a href="blogdetail.html">blog detail</a></li>
+												<li><a href="404.html">404 error</a></li>
+												<li><a href="comming-soon.html">comming soon</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--************************************
+				Header End
+		*************************************-->
+		<!--************************************
+				Banner Start
+		*************************************-->
+		<div class="tg-banner tg-haslayout">
+			<div class="tg-imglayer">
+				<img src="~/Admin/images/bg-pattran.png" alt="image desctription">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="tg-banner-content tg-haslayout">
+						<div class="tg-pagetitle">
+							<h1>Team Players</h1>
+						</div>
+						<ol class="tg-breadcrumb">
+							<li><a href="#">Home</a></li>
+							<li class="active">Team Players</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--************************************
+				Banner End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-haslayout">
+			<!--************************************
+					Top Rated Player Start
+			*************************************-->
+			<section class="tg-main-section tg-haslayout">
+				<div class="container">
+					
+
+
+
+					
+
+					
+
+				
+					<div id="exTab3" class="container">
+						<ul class="nav nav-pills">
+							<li class="active">
+								<a href="#1b" data-toggle="tab">Players</a>
+							</li>
+							<li>
+								<a href="#2b" data-toggle="tab">Match Results</a>
+							</li>
+							<li>
+								<a href="#3b" data-toggle="tab">Applying clearfix</a>
+							</li>
+							<li>
+								<a href="#4a" data-toggle="tab">Background color</a>
+							</li>
+						</ul>
+
+						<div class="tab-content clearfix">
+							<div class="tab-pane active" id="1b">
+								<div class="flex-container space-between">
+									@foreach (var teamplayerGalleryItem in Model.players)
+									{
+
+										<div class="col card">
+											<div class="img-placeholder">
+												<img src="https://oneftbl-cms.imgix.net/https%3A%2F%2Fimages.onefootball.com%2Fplayers%2F180%2F258501.jpg?auto=format%2Ccompress&crop=faces&dpr=2&fit=crop&h=0&q=25&w=48&s=282fbace74bb1214a8c36fe741c907ec" style="max-width: 100%; max-height: 100%; width: auto; height: auto;">
+											</div>
+											<div>
+												<h3 class="nameheading">@teamplayerGalleryItem.name</h3>
+												<p class="nameheading">@teamplayerGalleryItem.position</p>
+
+												<p class="playerparagraph">TEAM : <i class=""></i> @teamplayerGalleryItem.teamname</p>
+												<p class="playerparagraph">JERSEY : <i class=""></i> @teamplayerGalleryItem.age</p>
+
+
+												<button data-toggle="modal" data-target="#basicModal" class="btnViewPDetail" style="border:1px solid #000;justify-content:center;" title=@teamplayerGalleryItem.Id>Detail</button>
+													@* <button ng-click="showPopup()" class="button icon ion-edit">Show Popup</button> *@
+												<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+													<div class="modal-dialog">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h4 class="modal-title" id="myModalLabel">title</h4>
+																<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																	<span aria-hidden="true">&times;</span>
+																</button>
+															</div>
+															<div class="modal-body">
+																<div class="container-fluid">
+																	<div class="row">
+																		<div class="col-md-3">
+																			<h5>Age</h5>
+																		</div>
+																		<div class="col-md-3">
+																			<h6 id="lblage">1</h6>
+																		</div>
+																		<div class="col-md-4">
+																			<h5>Jersey</h5>
+																		</div>
+																		<div class="col-md-2 ">
+																			<h6 id="lbljersey">1</h6>
+																		</div>
+																	</div>
+
+
+																	<div class="row">
+																		<div class="col-md-3">
+																			<h5>Weight</h5>
+																		</div>
+																		<div class="col-md-3">
+																			<h6 id="lblweight">1</h6>
+																		</div>
+																		<div class="col-md-4">
+																			<h5>Height</h5>
+																		</div>
+																		<div class="col-md-2 ">
+																			<h6 id="lblheight">1</h6>
+																		</div>
+																	</div>
+
+																	<div class="row">
+																		<div class="col-md-3">
+																			<h5>Play Time</h5>
+																		</div>
+																		<div class="col-md-3">
+																			<h6 id="lblplaytime">1</h6>
+																		</div>
+																		<div class="col-md-4">
+																			<h5>Fauls</h5>
+																		</div>
+																		<div class="col-md-2 ">
+																			<h6 id="lblfaulcom">1</h6>
+																		</div>
+																	</div>
+
+																	<div class="row">
+																		<div class="col-md-3">
+																			<h5>Red Cards</h5>
+																		</div>
+																		<div class="col-md-3">
+																			<h6 id="lblredcard">1</h6>
+																		</div>
+																		<div class="col-md-4">
+																			<h5>Yellow Cards</h5>
+																		</div>
+																		<div class="col-md-2 ">
+																			<h6 id="lblyelcard">1</h6>
+																		</div>
+																	</div>
+
+																	<div class="row">
+																		<div class="col-md-3">
+																			<h5>Goals</h5>
+																		</div>
+																		<div class="col-md-3">
+																			<h6 id="lblgoal">1</h6>
+																		</div>
+																		<div class="col-md-4">
+																			<h5>Off Sides</h5>
+																		</div>
+																		<div class="col-md-2 ">
+																			<h6 id="lbloffside">1</h6>
+																		</div>
+																	</div>
+																</div>
+																
+															</div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+																<button type="button" class="btn btn-primary">Save changes</button>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											
+											</div>
+										</div>
+										@if (teamplayerGalleryItem == Model.players[Model.players.Count - 1] || teamplayerGalleryItem == Model.players[Model.players.Count - 2])
+										{
+											<div class="clearfix"></div>
+
+										}
+
+									}
+								</div>
+							</div>
+							<div class="tab-pane" id="2b">
+								<div class="flex-container space-between">
+									@foreach (var teamplayermatchItem in Model.matchresults)
+									{
+										<a class="card1 @("status" + teamplayermatchItem.status)" href="#">
+											<!-- Your card content here -->
+											<h4 class="small">
+												<img src="@teamplayermatchItem.Team1FlagImage" width="44" height="44"> &nbsp;
+												@teamplayermatchItem.Team1Name @*  @teamplayermatchItem.status *@  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+												@teamplayermatchItem.Team1_Goal  : @teamplayermatchItem.Team2_Goal &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+												@teamplayermatchItem.Team2Name &nbsp; <img src="@teamplayermatchItem.Team2FlagImage" width="44" height="44">
+											</h4>
+											<p class="small">@teamplayermatchItem.MatchDatetime</p>
+
+											<!-- Other card content -->
+
+											<div class="go-corner" href="#">
+												<div class="go-arrow">
+													→
+												</div>
+											</div>
+										</a>
+									}
+
+								</div>
+							</div>
+							<div class="tab-pane" id="3b">
+								<h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
+							</div>
+							<div class="tab-pane" id="4b">
+								<h3>We use css to change the background color of the content to be equal to the tab</h3>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Bootstrap core JavaScript
+						================================================== -->
+					<!-- Placed at the end of the document so the pages load faster -->
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+					<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+					@* <div class="flex-container space-between">
+						@foreach (var teamplayerGalleryItem in Model.players)
+						{
+						
+							<div class="col card">
+								<div class="img-placeholder">
+									<img src="~/Admin/images/simple.png" style="max-width: 100%; max-height: 100%; width: auto; height: auto;">
+								</div>
+								<div>
+									<h3>@teamplayerGalleryItem.name</h3>
+									<p>TEAM : <i class=""></i> @teamplayerGalleryItem.teamname</p>
+									<p>JERSEY<i class=""></i> @teamplayerGalleryItem.age</p>
+									<p>POSITION<i class=""></i> <a href="#">@teamplayerGalleryItem.position</a></p>
+								</div>
+							</div>
+							@if (teamplayerGalleryItem == Model.players[Model.players.Count - 1] || teamplayerGalleryItem == Model.players[Model.players.Count - 2])
+							{
+								<div class="clearfix"></div>
+						
+							}
+						
+						}
+					</div> *@
+
+					<!-- Gradient Generator: https://coolors.co/gradients
+					 Tints and Shade Generator: https://maketintsandshades.com/-->
+					@* <div class="col-sm-11 col-xs-11 pull-right">
+						<div class="row">
+							<div class="tg-topratedplayer tg-haslayout">
+								<div class="row">
+									<div class="col-md-7 col-sm-12 col-xs-12">
+										<div id="tg-playerscrollbar" class="tg-players tg-playerscrollbar">
+
+											@foreach (var playerGalleryItem in @Model.players)
+											{
+												<div class="tg-player">
+													<div class="col-sm-6 col-xs-6 pull-right">
+														<div class="tg-playcontent">
+															<a class="tg-theme-tag" href="#">@playerGalleryItem.teamname</a>
+															<h3><a href="#">@playerGalleryItem.name</a></h3>
+															<span class="tg-stars"><span></span></span>
+															<div class="tg-description">
+																<h3 style="color:#fff;">AGE :<a href="#">@playerGalleryItem.age</a></h3>
+																<h3 style="color:#fff;">Goals :<a href="#">@playerGalleryItem.OwnGoals</a></h3>
+															</div>
+															<ul class="tg-socialicons">
+																<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+																<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+																<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+																<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+															</ul>
+														</div>
+													</div>
+													<div class="col-sm-6 col-xs-6">
+														<figure>
+															<a href="#">
+																<img src="~/Admin/images/player/img-01.png" alt="image description">
+															</a>
+														</figure>
+													</div>
+												</div>
+											}
+											@* <div class="tg-player">
+											<div class="col-sm-6 col-xs-6 pull-right">
+											<div class="tg-playcontent">
+											<a class="tg-theme-tag" href="#">SWEEPER</a>
+											<h3><a href="#">Hustlin’ Owls</a></h3>
+											<span class="tg-stars"><span></span></span>
+											<div class="tg-description">
+											<p>Incididunt utia labore et dolore siti magna aliqua adinim lipat</p>
+											</div>
+											<ul class="tg-socialicons">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+											</ul>
+											</div>
+											</div>
+											<div class="col-sm-6 col-xs-6">
+											<figure>
+											<a href="#">
+											<img src="~/Admin/images/player/img-02.png" alt="image description">
+											</a>
+											</figure>
+											</div>
+											</div>
+											<div class="tg-player">
+											<div class="col-sm-6 col-xs-6 pull-right">
+											<div class="tg-playcontent">
+											<a class="tg-theme-tag" href="#">SWEEPER</a>
+											<h3><a href="#">Hustlin’ Owls</a></h3>
+											<span class="tg-stars"><span></span></span>
+											<div class="tg-description">
+											<p>Incididunt utia labore et dolore siti magna aliqua adinim lipat</p>
+											</div>
+											<ul class="tg-socialicons">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+											</ul>
+											</div>
+											</div>
+											<div class="col-sm-6 col-xs-6">
+											<figure>
+											<a href="#">
+											<img src="~/Admin/images/player/img-03.png" alt="image description">
+											</a>
+											</figure>
+											</div>
+											</div>
+											<div class="tg-player">
+											<div class="col-sm-6 col-xs-6 pull-right">
+											<div class="tg-playcontent">
+											<a class="tg-theme-tag" href="#">SWEEPER</a>
+											<h3><a href="#">Hustlin’ Owls</a></h3>
+											<span class="tg-stars"><span></span></span>
+											<div class="tg-description">
+											<p>Incididunt utia labore et dolore siti magna aliqua adinim lipat</p>
+											</div>
+											<ul class="tg-socialicons">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+											</ul>
+											</div>
+											</div>
+											<div class="col-sm-6 col-xs-6">
+											<figure>
+											<a href="#">
+											<img src="~/Admin/images/player/img-01.png" alt="image description">
+											</a>
+											</figure>
+											</div>
+											</div>
+											<div class="tg-player">
+											<div class="col-sm-6 col-xs-6 pull-right">
+											<div class="tg-playcontent">
+											<a class="tg-theme-tag" href="#">SWEEPER</a>
+											<h3><a href="#">Hustlin’ Owls</a></h3>
+											<span class="tg-stars"><span></span></span>
+											<div class="tg-description">
+											<p>Incididunt utia labore et dolore siti magna aliqua adinim lipat</p>
+											</div>
+											<ul class="tg-socialicons">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+											</ul>
+											</div>
+											</div>
+											<div class="col-sm-6 col-xs-6">
+											<figure>
+											<a href="#">
+											<img src="~/Admin/images/player/img-02.png" alt="image description">
+											</a>
+											</figure>
+											</div>
+											</div>
+											<div class="tg-player">
+											<div class="col-sm-6 col-xs-6 pull-right">
+											<div class="tg-playcontent">
+											<a class="tg-theme-tag" href="#">SWEEPER</a>
+											<h3><a href="#">Hustlin’ Owls</a></h3>
+											<span class="tg-stars"><span></span></span>
+											<div class="tg-description">
+											<p>Incididunt utia labore et dolore siti magna aliqua adinim lipat</p>
+											</div>
+											<ul class="tg-socialicons">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+											</ul>
+											</div>
+											</div>
+											<div class="col-sm-6 col-xs-6">
+											<figure>
+											<a href="#">
+											<img src="~/Admin/images/player/img-03.png" alt="image description">
+											</a>
+											</figure>
+											</div>
+											</div> *@
+									
+							
+				</div>
+			</section>
+			<!--************************************
+					Top Rated Player End
+			*************************************-->
+			<!--************************************
+					Testimonials Start
+			*************************************-->
+			<!--************************************
+					Testimonials End
+			*************************************-->
+			<!--************************************
+					Our Sponser Start
+			*************************************-->
+			<!--************************************
+					Our Sponser End
+			*************************************-->
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+		<!--************************************
+				Footer Start
+		*************************************-->
+
+		<footer id="tg-footer" class="tg-footer tg-haslayout">
+			<div class="tg-haslayout tg-footerinfobox">
+				<div class="tg-bgboxone"></div>
+				<div class="tg-bgboxtwo"></div>
+				<div class="tg-footerinfo">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="tg-footercol">
+									<div class="tg-posttitle">
+										<h3>signup newsletter</h3>
+									</div>
+									<div class="tg-description">
+										<p>Adipisicing elit, sed do eiusmod tempor incidunta utiai labore et dolore magna si aliqua quis.</p>
+									</div>
+									<form class="tg-form-newsletter">
+										<fieldset>
+											<div class="form-group">
+												<input type="email" class="form-control" name="email" placeholder="Email">
+											</div>
+											<button class="tg-btn" type="submit">signup</button>
+										</fieldset>
+									</form>
+									<div class="tg-posttitle">
+										<h3>popular tags</h3>
+									</div>
+									<div class="tg-tags">
+										<a class="tg-tag" href="#">fashion</a>
+										<a class="tg-tag" href="#">travel</a>
+										<a class="tg-tag" href="#">blog</a>
+										<a class="tg-tag" href="#">sports</a>
+										<a class="tg-tag" href="#">magazine</a>
+										<a class="tg-tag" href="#">ui</a>
+										<a class="tg-tag" href="#">tech</a>
+										<a class="tg-tag" href="#">fun time</a>
+										<a class="tg-tag" href="#">soccer</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="tg-footercol">
+									<div class="tg-posttitle">
+										<h3>Top products</h3>
+									</div>
+									<div class="tg-toprated">
+										<ul>
+											<li>
+												<figure>
+													<a href="#">
+														<img src="~/Admin/images/thumbnails/img-04.jpg" alt="image description">
+													</a>
+												</figure>
+												<div class="tg-productcontent">
+													<h4><a href="#">Smooth 3-Stripes Scarf</a></h4><span class="tg-stars"><span></span></span>
+													<span class="tg-price">Price: $67</span>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<a href="#">
+														<img src="~/Admin/images/thumbnails/img-05.jpg" alt="image description">
+													</a>
+												</figure>
+												<div class="tg-productcontent">
+													<h4><a href="#">Smooth 3-Stripes Scarf</a></h4><span class="tg-stars"><span></span></span>
+													<span class="tg-price">Price: $67</span>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<a href="#">
+														<img src="~/Admin//thumbnails/img-06.jpg" alt="image description">
+													</a>
+												</figure>
+												<div class="tg-productcontent">
+													<h4><a href="#">Smooth 3-Stripes Scarf</a></h4><span class="tg-stars"><span></span></span>
+													<span class="tg-price">Price: $67</span>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<a href="#">
+														<img src="~/Admin/images/thumbnails/img-07.jpg" alt="image description">
+													</a>
+												</figure>
+												<div class="tg-productcontent">
+													<h4><a href="#">Smooth 3-Stripes Scarf</a></h4><span class="tg-stars"><span></span></span>
+													<span class="tg-price">Price: $67</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="tg-footercol">
+									<div class="tg-haslayout">
+										<strong class="tg-logo">
+											<a href="#">
+												<img src="~/Admin/images/logo2.png" alt="image description">
+											</a>
+										</strong>
+									</div>
+									<div class="tg-description">
+										<p>Consectetur adipisicing elit sedtado eiusmod dunt ut labore et dolore magna aliqua enim minim veniami quis nostrud.</p>
+									</div>
+									<ul class="tg-contactinfo">
+										<li>
+											<i class="fa fa-home"></i>
+											<address>123 Eccles Old Road, New Salford Road London, Uk, M6 7AF</address>
+										</li>
+										<li>
+											<i class="fa fa-envelope-o"></i>
+											<a href="info%40domain.html">info@domain.com</a>
+										</li>
+										<li>
+											<i class="fa fa-phone"></i>
+											<span>+44 123 456 788 - 9</span>
+										</li>
+									</ul>
+									<div class="tg-haslayout">
+										<a class="tg-btn" href="#">read more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tg-footerbar">
+				<div class="container">
+					<span class="tg-copyright">&copy; 2016  |  All Rights Reserved</span>
+					<nav class="tg-footernav">
+						<ul>
+							<li><a href="#">Main</a></li>
+							<li><a href="#">Team</a></li>
+							<li><a href="#">Buy Tickets</a></li>
+							<li><a href="#">Match Results</a></li>
+							<li><a href="#">Upcoming Matches</a></li>
+							<li><a href="#">Shop</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</footer>
+
+		<!--************************************
+				Footer End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	<!--************************************
+			Search Start
+	*************************************-->
+	<div class="tg-searchbox">
+		<a id="tg-close-search" class="tg-close-search" href="javascript:void(0)"><span class="fa fa-close"></span></a>
+		<div class="tg-searcharea">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<form class="tg-form-search">
+							<fieldset>
+								<input type="search" class="form-control" placeholder="keyword">
+								<i class="icon-icon_search2"></i>
+							</fieldset>
+						</form>
+						<p>Start typing and press Enter to search</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--************************************
+			Search End
+	*************************************-->
+	<!--************************************
+		LightBoxes Start
+	*************************************-->
+	<div class="tg-modalbox modal fade" id="tg-login" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="tg-modal-content">
+				<div class="tg-formarea">
+					<div class="tg-border-heading">
+						<h3>Login</h3>
+					</div>
+					<form class="tg-loginform" method="post">
+						<fieldset>
+							<div class="form-group">
+								<input type="text" name="userName/email" class="form-control" placeholder="username/email">
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" class="form-control" placeholder="password">
+							</div>
+							<div class="form-group">
+								<label>
+									<input type="checkbox" value="rememberme" class="checkbox">
+									<em>Remember Me</em>
+								</label>
+								<a href="#">
+									<em>Forgot Password</em>
+									<i class="fa fa-question-circle"></i>
+								</a>
+							</div>
+							<div class="form-group">
+								<button class="tg-btn tg-btn-lg" type="submit">Login Now</button>
+							</div>
+							<div class="tg-description">
+								<p>Don't have an account? <a href="#">Signup</a></p>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<div class="tg-logintype">
+					<div class="tg-border-heading">
+						<h3>Login with</h3>
+					</div>
+					<ul>
+						<li class="tg-facebook"><a href="#">facebook</a></li>
+						<li class="tg-twitter"><a href="#">twitter</a></li>
+						<li class="tg-googleplus"><a href="#">google+</a></li>
+						<li class="tg-linkedin"><a href="#">linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tg-modalbox modal fade" id="tg-register" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="tg-modal-content">
+				<div class="tg-formarea">
+					<div class="tg-border-heading">
+						<h3>Signup</h3>
+					</div>
+					<form class="tg-loginform" method="post">
+						<fieldset>
+							<div class="form-group">
+								<input type="text" name="userName" class="form-control" placeholder="username">
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="email">
+							</div>
+							<div class="form-group">
+								<div class="tg-note">
+									<i class="fa fa-exclamation-circle"></i>
+									<span>We will email you your password.</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<button class="tg-btn tg-btn-lg" type="submit">Login Now</button>
+							</div>
+							<div class="tg-description">
+								<p>Already have an account? <a href="#">Login</a></p>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<div class="tg-logintype">
+					<div class="tg-border-heading">
+						<h3>Signup with</h3>
+					</div>
+					<ul>
+						<li class="tg-facebook"><a href="#">facebook</a></li>
+						<li class="tg-twitter"><a href="#">twitter</a></li>
+						<li class="tg-googleplus"><a href="#">google+</a></li>
+						<li class="tg-linkedin"><a href="#">linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--************************************
+		LightBoxes End
+	*************************************-->
+	<script src="~/Admin/js/vendor/jquery-library.js"></script>
+	<script src="~/Admin/js/vendor/bootstrap.min.js"></script>
+	<script src="~/Admin/js/customScrollbar.min.js"></script>
+	<script src="~/Admin/js/owl.carousel.js"></script>
+	<script src="~/Admin/js/isotope.pkgd.js"></script>
+	<script src="~/Admin/js/prettyPhoto.js"></script>
+	<script src="~/Admin/js/swiper.min.js"></script>
+	<script src="~/Admin/js/jquery-ui.js"></script>
+	<script src="~/Admin/js/countTo.js"></script>
+	<script src="~/Admin/js/appear.js"></script>
+	<script src="~/Admin/js/main.js"></script>
+</body>
+</html>
+

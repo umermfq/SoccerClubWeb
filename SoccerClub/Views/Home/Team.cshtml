@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Team";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+@model SoccerClub.Models.team
+
+<div>
+    <h3>Team ID: @Model.Id</h3>
+    <p>Team Name: @Model.teamname</p>
+    <p>League: @Model.Leaguename</p>
+    <img src="~/Admin/images/thumbnails/@Model.TeamFlagImage" alt="Team Flag Image">
+
+
+</div>
+
+
