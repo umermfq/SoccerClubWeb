@@ -1,4 +1,6 @@
-﻿namespace SoccerClub.Models
+﻿using System.Numerics;
+
+namespace SoccerClub.Models
 {
 	public class Home
 	{
@@ -9,8 +11,11 @@
 		public List<Orders> Orders = new List<Orders>();
 		public List<Product> Products = new List<Product>();
 		public List<Register> Registers = new List<Register>();
-	
-		public Search mysearch = new Search();
+		public List<cartdetail> cartdetails = new List<cartdetail>();
+
+        public BigInteger Total { get; set; }
+
+        public Search mysearch = new Search();
         public team teamDetails { get; set; }
         public Orders OrderDetails { get; set; }
        

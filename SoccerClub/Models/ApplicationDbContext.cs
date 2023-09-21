@@ -91,13 +91,13 @@ namespace SoccerClub.Models
 
             return product;
         }
-        public List<login> GetAllUsers()
+        public List<Register> GetAllUsers()
         {
-            var user = new List<login>();
+            var user = new List<Register>();
 
             using (var command = Database.GetDbConnection().CreateCommand())
             {
-                command.CommandText = "SELECT * from login ";
+                command.CommandText = "SELECT * from Register ";
                 command.CommandType = System.Data.CommandType.Text;
 
                 Database.OpenConnection();
@@ -106,14 +106,18 @@ namespace SoccerClub.Models
                 {
                     while (result.Read())
                     {
-                        login mr = new login();
-                        mr.ID = Convert.ToInt32(result[0]);
-                        mr.username = Convert.ToString(result[1]);
-                        mr.password = Convert.ToString(result[2]);
+                        Register re = new Register();
+                        re.ID = Convert.ToInt32(result[0]);
+                        re.FirstName = Convert.ToString(result[1]);
+                        re.LastName = Convert.ToString(result[2]);
+                        re.Email = Convert.ToString(result[4]);
+                        re.PhoneNumber = Convert.ToString(result[5]);
+                        re.Gender = Convert.ToString(result[7]);
+                        re.isAdmin = Convert.ToInt32(result[8]);
                        
 
 
-                        user.Add(mr);
+                        user.Add(re);
                     }
                 }
             }

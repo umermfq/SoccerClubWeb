@@ -1,106 +1,345 @@
-﻿@model IEnumerable<SoccerClub.Models.CartItem>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .desk-container-viewcart{
+		width: 100%;
+		height: auto;
+		padding-top: 120px;
+		background-color: #eee;
+		padding-bottom: 100px;
+	}
+	.desk-viewcart{
+		width: 1050px;
+		height: auto;
+		margin: 0 auto;
+		background-color: #fff;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 50px;
+	}
+	table{
+		width: 1000px;
+		margin: 0 auto;
+		vertical-align: middle;
+		margin-top: 10px;
+	}
+	table th  {
+		font-family:'Raleway',sans-serif;
+		text-transform: uppercase;
+		padding: 10px;
+		font-weight: 700;
+		color: #000;
+		text-align: left;
+        font-size: 14px;
+	}
+	table tr td {
+		font-family:'Raleway',sans-serif;
+		width: 50px;
+		/* height: 50px; */
+		font-size: 12px;
+		color: #000;
+		padding: 5px;
+	}
+	table tr td img {
+		width: 65px;
+    	height: 100px;
+	}
+	table tr td a{
+		color: #000;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+	.desk-display-col{
+		/* padding-left: 10px; */
+		height: auto;
+	}
+	.bold-character{
+		font-weight: bold;
+	}
+	.border-gray{
+		border: 1px solid #aaa;
+	}
+	.txt-center{
+		text-align: center;
+	}
+	.txt-left{
+		text-align: left;
+	}
+	.desk-width-long{ 
+		width: 130px;
+	}
+	.desk-name-product{
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: 600;
+	}
+	.desk-attribute-child{
+		color: #666;
+		font-size: 12px;
+	}
+	.hover-yellow:hover{
+		color: #ff9800;
+	}
+	.color-yellow{
+		color: #ff9800;
+	}
+	.desk-total{
+		margin-top: 50px;
+		width: 100%;
+		height:80px;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 20px;
+	}
+	.desk-total-1st{
+		width: 50%;
+		height: 100%;
+	}
+	.desk-total-2st{
+		width: 50%;
+		height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+	}
+	.desk-total-2st span{
+		font-weight: 700;
+        display: flex;
+        align-items: center;
+	}
+	.desk-total-2st button{
+		height: 30px;
+		width: 100px;
+		color: #fff;
+		background-color: #000;
+		border: none;
+	}
+	.desk-total-2st button:hover{
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #000;
+	}
+	.desk-comment-product{
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-bottom: 50px;
+		
+	}
+	.desk-comment-product .desk-product{
+		width: 200px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.desk-comment-product .desk-product .desk-img-comment{
+		padding-top: 30px;
+		position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+	.desk-comment-product .desk-product .desk-img-comment img {
+		width: 180px;
+		height: 200px;
+	}
+	.desk-comment-product .desk-product .desk-img-comment .desk-compare-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+	}
+	.desk-comment-product .desk-product .desk-img-comment .desk-compare-icon i{
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		margin-top: 2px;
+	}
+	.desk-product .desk-info-comment{
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+        justify-content: flex-start;
+	}
+	.desk-product .desk-info-comment a{
+	 	text-transform: uppercase;
+	 	font-family: 'Raleway', sans-serif;
+	 	font-weight: 700;
+	 	font-size: 14px;
+	 	text-decoration: none;
+	 	color: #000;
+	}
+	.desk-product .desk-info-comment a:hover{
+		color: #ff9800;
+	}
+	.desk-product .desk-info-comment span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.desk-evaluate{
+		display: flex;
+		flex-direction: row;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.desk-product .desk-info-comment button{
+		margin-top: 40px;
+		border: none;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+	.desk-evaluate i{
+		color: #FF9800;
+	}
+	.control-navigation {
+		display: flex;
+		flex-direction: row;
+		padding-left: 20px;
+		height: 50px;
+        justify-content: space-between;
+	}
+	.control-navigation p{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		margin-top: 20px;
+		padding-left: 10px;
+		border-left: 2px solid #ff9800;
+	}
+	media screen and (min-width: 320px) and (max-width: 640px){
+		.desk-viewcart{
+			width: 100%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.desk-viewcart .control-navigation{
+			width: 100%;
+		}
+		.desk-viewcart .desk-product{
+			width: calc(100% / 2);
+		}
+		.product-in-cart{
+			overflow: auto;
+		}
+	}
+	media screen and (min-width: 641px) and (max-width: 768px){
+		.desk-viewcart{
+			width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.product-in-cart{
+			overflow: auto;
+		}
+		.desk-viewcart .desk-product{
+			width: calc(100% / 2);
+		}
+	}
+	media screen and (min-width: 769px) and (max-width: 960px){
+		.desk-viewcart{
+			width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.desk-viewcart .desk-product{
+			width: calc(100% / 3);
+		}
+		.product-in-cart{
+			overflow: auto;
+		}
+	}
+	media screen and (min-width: 961px) and (max-width: 1280px){
+		.desk-viewcart{
+			width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.desk-viewcart .desk-product{
+			width: calc(100% / 4);
+		}
+		.product-in-cart{
+			overflow: auto;
+		}
+	}
+	media screen and (min-width: 1280px) {
+		
+	}
+    .td-contain-img{
+        text-align: center;
+    }
+    .td-contain-img img {
+        display: inline-block;
+    }
+</style>
+<body>
+	<div class="desk-container-viewcart">
+		<div class="desk-viewcart">
+			<div class="product-in-cart">
+				<table>
+					<tr>
+						<th></th>
+						<th class="desk-width-long txt-left">Item in your bag</th>
+						<th class="txt-center">Quantity</th>
+						<th class="txt-center">price</th>
+						<th class="txt-center">date</th>
+					</tr>
 
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th class="text-center">Price</th>
-                        <th class="text-center">Total</th>
-                        <th> </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="col-sm-8 col-md-6">
-                            <div class="media">
-                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                    <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
-                                    <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center">
-                            <input type="email" class="form-control" id="exampleInputEmail1" value="3">
-                        </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
-                        <td class="col-sm-1 col-md-1">
-                            <button type="button" class="btn btn-danger">
-                                <span class="glyphicon glyphicon-remove"></span> Remove
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-6">
-                            <div class="media">
-                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                    <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
-                                    <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="col-md-1" style="text-align: center">
-                            <input type="email" class="form-control" id="exampleInputEmail1" value="2">
-                        </td>
-                        <td class="col-md-1 text-center"><strong>$4.99</strong></td>
-                        <td class="col-md-1 text-center"><strong>$9.98</strong></td>
-                        <td class="col-md-1">
-                            <button type="button" class="btn btn-danger">
-                                <span class="glyphicon glyphicon-remove"></span> Remove
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><h5><strong>$24.59</strong></h5></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h5>Estimated shipping</h5></td>
-                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h3>Total</h3></td>
-                        <td class="text-right"><h3><strong>$31.53</strong></h3></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>
-                            <button type="button" class="btn btn-default">
-                                <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-                            </button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                Checkout <span class="glyphicon glyphicon-play"></span>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div></html>
+					 @foreach (var item in @Model.cartdetails)
+				    {
+						<tr>
+							<td class="td-contain-img">
+								<img src="@item.Image" alt="">
+							</td>
+							<td class="desk-wrapper-viewcart desk-display-col">
+								<a class="desk-name-product">@item.name</a><br>
+								<a class="hover-yellow" href="">Remove</a>
+							</td>
+							<td class="txt-center desk-attribute-child">@item.Quantity</td>
+							<td class="txt-center desk-attribute-child">@item.Price</td>
+							<td class="txt-center desk-attribute-child">@item.dated</td>
+							<td class="txt-center"><a class="color-yellow" href="@Url.Action("RemoveFromCart", "Merchandise", new { productId = @item.ProductId })">Remove</a></td>
+						</tr>
+
+					}
+				</table>
+				<div class="desk-total">
+					<div class="desk-total-1st"></div>
+					<div class="desk-total-2st">
+						<span class="">Total: @Model.Total</span>
+						<a href="/Merchandise/Index"><button class="">Back</button></a>
+						<button class="">Check out</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+      
+    
+</body>
+</html>

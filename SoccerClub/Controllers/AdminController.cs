@@ -25,7 +25,18 @@ namespace SoccerClub.Controllers
             }
             Home home = new Home();
             var logins = _dbContext.GetAllUsers();
-            home.logins = logins;
+            home.Registers = logins;
+            return View(home);
+        }
+        public IActionResult User()
+        {
+            if (HttpContext.Session.GetInt32("UserID") == null)
+            {
+                return RedirectToAction("Index", "UserLogin");
+            }
+            Home home = new Home();
+            var logins = _dbContext.GetAllUsers();
+            home.Registers = logins;
             return View(home);
         }
 

@@ -111,41 +111,8 @@ namespace SoccerClub.Controllers
         }
 
         [HttpGet]
-        public ActionResult dashb(Register e)
+        public ActionResult dashboardUser()
         {
-            Register user = new Register();
-            DataSet ds = new DataSet();
-
-          /*  using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-BUMMN38;Initial Catalog=Football;User ID=sa;Password=Mbe@1234;TrustServerCertificate=True"))
-            {
-                using (SqlCommand cmd = new SqlCommand("sp_GetRegisterDetails", con))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@Email", SqlDbType.VarChar, 30).Value = HttpContext.Session.GetString("Email"); 
-                    con.Open();
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    sda.Fill(ds);
-                    List<Register> userlist = new List<Register>();
-                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-                    {
-                        Register uobj = new Register();
-                        uobj.ID = Convert.ToInt32(ds.Tables[0].Rows[i]["ID"].ToString());
-                        uobj.FirstName = ds.Tables[0].Rows[i]["FirstName"].ToString();
-                        uobj.LastName = ds.Tables[0].Rows[i]["LastName"].ToString();
-                        uobj.Password = ds.Tables[0].Rows[i]["Password"].ToString();
-                        uobj.Email = ds.Tables[0].Rows[i]["Email"].ToString();
-                        uobj.PhoneNumber = ds.Tables[0].Rows[i]["Phone"].ToString();
-                        uobj.SecurityAnwser = ds.Tables[0].Rows[i]["SecurityAnwser"].ToString();
-                        uobj.Gender = ds.Tables[0].Rows[i]["Gender"].ToString();
-
-                        userlist.Add(uobj);
-
-                    }
-                    user.Registerinfo = userlist;
-                }
-                con.Close();
-
-            }*/
             return View();
         }
         public async Task<ActionResult> Logout()

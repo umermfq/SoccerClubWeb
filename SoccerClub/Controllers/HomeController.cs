@@ -25,7 +25,7 @@ namespace SoccerClub.Controllers
         {
             Home home = new Home();
             var logins = _dbContext.GetAllUsers();
-            home.logins = logins;
+            home.Registers = logins;
             return View(home);
         }
         public IActionResult Main()
@@ -145,6 +145,8 @@ namespace SoccerClub.Controllers
 		{
 			Home home = new Home();
 			var matchresults = _dbContext.GetAllMatches();
+			var teams = _dbContext.GetAllTeams();
+			home.teams = teams;
 			home.matchresults = matchresults;
 			return View(home);
 		}
